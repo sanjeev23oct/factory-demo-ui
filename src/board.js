@@ -15,3 +15,11 @@ export function sortTasks(tasks) {
   // Open tasks first, then by id so the order is stable.
   return [...tasks].sort((a, b) => Number(a.done) - Number(b.done) || a.id - b.id);
 }
+
+export function progress(tasks) {
+  const { total, done } = summary(tasks);
+  const percent = total === 0 ? 0 : Math.round((done / total) * 100);
+  const label =
+    total === 0 ? 'No tasks yet' : done === total ? 'All done' : `${done} of ${total} done`;
+  return { percent, label };
+}
