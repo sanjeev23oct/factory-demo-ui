@@ -13,10 +13,10 @@ Resolves the one open "Needs clarification" item so the build is deterministic:
 
 Satisfies: AC 1.1, AC 3.1, AC 3.2, AC 3.3, AC 4.1, AC 4.2, and the correctness property that a count is never computed from the filtered/visible list (these functions only format a label and a count they are given)
 
-- [ ] 1.1 `filterButtonText(label, count)` in `src/board.js`     → run: `/build-ui-logic`
-  - [ ] 1.1.1 new exported pure function: returns `` `${label} ${count}` ``, e.g. `filterButtonText('All', 3) === 'All 3'`, `filterButtonText('Done', 0) === 'Done 0'` (AC 1.1, 3.1, 3.2, 3.3)
-- [ ] 1.2 `filterButtonAriaLabel(label, count)` in `src/board.js` → run: `/build-ui-logic`
-  - [ ] 1.2.1 new exported pure function: returns `` `${label}, ${count} task` `` when `count === 1`, otherwise `` `${label}, ${count} tasks` ``, e.g. `filterButtonAriaLabel('Done', 1) === 'Done, 1 task'`, `filterButtonAriaLabel('Open', 2) === 'Open, 2 tasks'`, `filterButtonAriaLabel('All', 0) === 'All, 0 tasks'` (AC 4.1, 4.2)
+- [x] 1.1 `filterButtonText(label, count)` in `src/board.js`     → run: `/build-ui-logic`
+  - [x] 1.1.1 new exported pure function: returns `` `${label} ${count}` ``, e.g. `filterButtonText('All', 3) === 'All 3'`, `filterButtonText('Done', 0) === 'Done 0'` (AC 1.1, 3.1, 3.2, 3.3)
+- [x] 1.2 `filterButtonAriaLabel(label, count)` in `src/board.js` → run: `/build-ui-logic`
+  - [x] 1.2.1 new exported pure function: returns `` `${label}, ${count} task` `` when `count === 1`, otherwise `` `${label}, ${count} tasks` ``, e.g. `filterButtonAriaLabel('Done', 1) === 'Done, 1 task'`, `filterButtonAriaLabel('Open', 2) === 'Open, 2 tasks'`, `filterButtonAriaLabel('All', 0) === 'All, 0 tasks'` (AC 4.1, 4.2)
 
 ### 1.X — Gate
 
