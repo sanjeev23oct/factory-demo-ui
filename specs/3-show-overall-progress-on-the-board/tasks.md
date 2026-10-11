@@ -41,12 +41,12 @@ Satisfies: AC 1.1, AC 1.2, AC 1.3, AC 1.4, AC 1.6, AC 2.1, AC 2.2
 
 Satisfies: AC 1.5, AC 1.6
 
-- [ ] 3.1 Add a `#progress` container to `index.html`, placed directly after the `<h1>` and directly before `<p id="summary">`  → run: `/build-ui-page`
-  - [ ] 3.1.1 the existing `<h1>`, `#summary`, and the three filter buttons (`data-testid="filter-all"`, `"filter-open"`, `"filter-done"`) keep their current markup and order
-- [ ] 3.2 Wire `draw()` in `src/main.js` to compute `progress(tasks)` and set `#progress`'s `innerHTML` to `renderProgress(...)` on every draw  → run: `/build-ui-page`
-  - [ ] 3.2.1 the existing wiring of `#tasks`, `#summary`, and the filter buttons' `aria-pressed` and click handling is unchanged
-- [ ] 3.3 Add styles for the progress bar's track and fill to `styles.css`  → run: `/build-ui-page`
-  - [ ] 3.3.1 the bar has a visible track and a fill that sits inside it, using the existing colour variables (`--line`, `--accent`, etc.)
+- [x] 3.1 Add a `#progress` container to `index.html`, placed directly after the `<h1>` and directly before `<p id="summary">`  → run: `/build-ui-page`
+  - [x] 3.1.1 the existing `<h1>`, `#summary`, and the three filter buttons (`data-testid="filter-all"`, `"filter-open"`, `"filter-done"`) keep their current markup and order
+- [x] 3.2 Wire `draw()` in `src/main.js` to compute `progress(tasks)` and set `#progress`'s `innerHTML` to `renderProgress(...)` on every draw  → run: `/build-ui-page`
+  - [x] 3.2.1 the existing wiring of `#tasks`, `#summary`, and the filter buttons' `aria-pressed` and click handling is unchanged
+- [x] 3.3 Add styles for the progress bar's track and fill to `styles.css`  → run: `/build-ui-page`
+  - [x] 3.3.1 the bar has a visible track and a fill that sits inside it, using the existing colour variables (`--line`, `--accent`, etc.)
 
 ### 3.X — Gate
 
