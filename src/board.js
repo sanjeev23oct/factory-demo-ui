@@ -21,5 +21,6 @@ export function filterButtonText(label, count) {
 }
 
 export function filterButtonAriaLabel(label, count) {
-  return count === 1 ? `${label}, ${count} task` : `${label}, ${count} tasks`;
+  const unit = count === 1 ? 'task' : 'tasks';
+  return `${label}, ${count} ${unit}`;
 }
