@@ -28,14 +28,14 @@ Satisfies: AC 1.1, AC 3.1, AC 3.2, AC 3.3, AC 4.1, AC 4.2, and the correctness p
 
 Satisfies: AC 1.1, AC 1.2, AC 1.3, AC 1.4, AC 1.5, AC 2.1, AC 2.2, AC 3.4, AC 4.1, AC 4.2, and the correctness properties that the count always comes from `summary(tasks)` over the full list (never the filtered list), that selecting a filter never changes any button's count, and that the `#summary` line is unaffected
 
-- [ ] 2.1 import the two new functions into `src/main.js`          → run: `/build-ui-page`
-  - [ ] 2.1.1 `import { filterButtonAriaLabel, filterButtonText, sortTasks, summary, visibleTasks } from './board.js';` (adds the two new names to the existing import)
-- [ ] 2.2 `draw()` in `src/main.js` sets each filter button's text and accessible name → run: `/build-ui-page`
-  - [ ] 2.2.1 inside `draw()`, after computing `summary(tasks)`, read each button's count from the matching field of that same `summary(tasks)` result — `total` for the button with `data-filter="all"`, `open` for `data-filter="open"`, `done` for `data-filter="done"` — never from `visibleTasks(tasks, filter)` (AC 1.2, 1.3, 1.4, 2.1, correctness property on the count's source)
-  - [ ] 2.2.2 for each filter button, derive its label by capitalizing its `data-filter` value (`'all'` → `'All'`, `'open'` → `'Open'`, `'done'` → `'Done'`) and set `button.textContent = filterButtonText(label, count)` (AC 1.1, 3.1, 3.2, 3.3)
-  - [ ] 2.2.3 for each filter button, set `button.setAttribute('aria-label', filterButtonAriaLabel(label, count))` using the same `label` and `count` as 2.2.2 (AC 4.1, 4.2)
-  - [ ] 2.2.4 the existing `aria-pressed` assignment, the filter buttons' click handler (which only reassigns `filter` and calls `draw()`), and the `counts.innerHTML = renderSummary(summary(tasks))` line are otherwise unchanged (AC 2.2, 3.4, correctness properties that selecting a filter only changes `aria-pressed`/the listed tasks, and that the `#summary` line keeps its current format)
-  - [ ] 2.2.5 `draw()` never sets or removes a button's `data-testid` or `data-filter` attribute (AC 1.5)
+- [x] 2.1 import the two new functions into `src/main.js`          → run: `/build-ui-page`
+  - [x] 2.1.1 `import { filterButtonAriaLabel, filterButtonText, sortTasks, summary, visibleTasks } from './board.js';` (adds the two new names to the existing import)
+- [x] 2.2 `draw()` in `src/main.js` sets each filter button's text and accessible name → run: `/build-ui-page`
+  - [x] 2.2.1 inside `draw()`, after computing `summary(tasks)`, read each button's count from the matching field of that same `summary(tasks)` result — `total` for the button with `data-filter="all"`, `open` for `data-filter="open"`, `done` for `data-filter="done"` — never from `visibleTasks(tasks, filter)` (AC 1.2, 1.3, 1.4, 2.1, correctness property on the count's source)
+  - [x] 2.2.2 for each filter button, derive its label by capitalizing its `data-filter` value (`'all'` → `'All'`, `'open'` → `'Open'`, `'done'` → `'Done'`) and set `button.textContent = filterButtonText(label, count)` (AC 1.1, 3.1, 3.2, 3.3)
+  - [x] 2.2.3 for each filter button, set `button.setAttribute('aria-label', filterButtonAriaLabel(label, count))` using the same `label` and `count` as 2.2.2 (AC 4.1, 4.2)
+  - [x] 2.2.4 the existing `aria-pressed` assignment, the filter buttons' click handler (which only reassigns `filter` and calls `draw()`), and the `counts.innerHTML = renderSummary(summary(tasks))` line are otherwise unchanged (AC 2.2, 3.4, correctness properties that selecting a filter only changes `aria-pressed`/the listed tasks, and that the `#summary` line keeps its current format)
+  - [x] 2.2.5 `draw()` never sets or removes a button's `data-testid` or `data-filter` attribute (AC 1.5)
 
 ### 2.X — Gate
 
