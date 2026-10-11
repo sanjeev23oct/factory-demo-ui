@@ -1,6 +1,12 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { sortTasks, summary, visibleTasks } from '../src/board.js';
+import {
+  filterButtonAriaLabel,
+  filterButtonText,
+  sortTasks,
+  summary,
+  visibleTasks,
+} from '../src/board.js';
 
 const tasks = [
   { id: 1, title: 'a', done: true },
@@ -21,4 +27,17 @@ test('visibleTasks filters by state', () => {
 test('sortTasks puts open tasks first and does not change its input', () => {
   assert.deepEqual(sortTasks(tasks).map((t) => t.id), [2, 3, 1]);
   assert.deepEqual(tasks.map((t) => t.id), [1, 2, 3]);
+});
+
+test('filterButtonText joins the label and count', () => {
+  assert.equal(filterButtonText('All', 3), 'All 3');
+  assert.equal(filterButtonText('Open', 2), 'Open 2');
+  assert.equal(filterButtonText('Done', 1), 'Done 1');
+  assert.equal(filterButtonText('Done', 0), 'Done 0');
+});
+
+test('filterButtonAriaLabel is singular only when the count is exactly 1', () => {
+  assert.equal(filterButtonAriaLabel('Done', 1), 'Done, 1 task');
+  assert.equal(filterButtonAriaLabel('Open', 2), 'Open, 2 tasks');
+  assert.equal(filterButtonAriaLabel('All', 0), 'All, 0 tasks');
 });
