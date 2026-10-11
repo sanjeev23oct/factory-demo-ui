@@ -19,3 +19,11 @@ export function renderList(tasks) {
 export function renderSummary({ total, done, open }) {
   return `<span data-testid="summary">${open} open · ${done} done · ${total} total</span>`;
 }
+
+export function renderProgress({ percent, label }) {
+  const safeLabel = escapeHtml(label);
+  return `<div class="progress" data-testid="progress-bar" role="progressbar" ` +
+    `aria-valuemin="0" aria-valuemax="100" aria-valuenow="${percent}" aria-valuetext="${safeLabel}">` +
+    `<div class="progress-fill" style="width: ${percent}%"></div></div>` +
+    `<span class="progress-label" data-testid="progress-label">${safeLabel}</span>`;
+}
