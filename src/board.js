@@ -15,3 +15,12 @@ export function sortTasks(tasks) {
   // Open tasks first, then by id so the order is stable.
   return [...tasks].sort((a, b) => Number(a.done) - Number(b.done) || a.id - b.id);
 }
+
+export function filterButtonText(label, count) {
+  return `${label} ${count}`;
+}
+
+export function filterButtonAriaLabel(label, count) {
+  const unit = count === 1 ? 'task' : 'tasks';
+  return `${label}, ${count} ${unit}`;
+}
