@@ -58,5 +58,5 @@ Satisfies: AC 1.5, AC 1.6
 
 Satisfies: AC 1.1, AC 1.2, AC 1.3, AC 1.4, AC 2.1, AC 2.2, correctness properties 1–5
 
-- [ ] 4.1 Tests for `progress(tasks)` in `test/board.test.js`, covering the empty list, all-done, zero-done-not-empty, and a mixed count that rounds (e.g. 1 of 3 → 33)  → run: `/build-tests`
-- [ ] 4.2 Tests for `renderProgress({ percent, label })` in `test/render.test.js`, covering the `data-testid`s, the ARIA attributes (`role`, `aria-valuemin`, `aria-valuemax`, `aria-valuenow`, `aria-valuetext`), and that the bar still renders at `percent` `0`  → run: `/build-tests`
+- [x] 4.1 Tests for `progress(tasks)` in `test/board.test.js`, covering the empty list, all-done, zero-done-not-empty, and a mixed count that rounds (e.g. 1 of 3 → 33)  → run: `/build-tests`
+- [x] 4.2 Tests for `renderProgress({ percent, label })` in `test/render.test.js`, covering the `data-testid`s, the ARIA attributes (`role`, `aria-valuemin`, `aria-valuemax`, `aria-valuenow`, `aria-valuetext`), and that the bar still renders at `percent` `0`  → run: `/build-tests`
