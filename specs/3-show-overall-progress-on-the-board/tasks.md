@@ -7,12 +7,12 @@
 
 Satisfies: AC 1.1, AC 1.2, AC 1.3, AC 1.4, correctness properties 1–3
 
-- [ ] 1.1 `progress(tasks)` in `src/board.js`  → run: `/build-ui-logic`
-  - [ ] 1.1.1 given `[]`, returns a whole-number `percent` of `0` and `label` exactly `No tasks yet`
-  - [ ] 1.1.2 given a non-empty list where every task is done, returns `percent` of `100` and `label` exactly `All done`
-  - [ ] 1.1.3 given a non-empty list where no task is done, returns `percent` of `0` and `label` exactly `{done} of {total} done` using the real counts (e.g. `0 of 3 done`), not `No tasks yet`
-  - [ ] 1.1.4 given 1 done of 3 total, returns `percent` of `33` (a whole number, rounded) and `label` exactly `1 of 3 done`
-  - [ ] 1.1.5 never returns `NaN` or `Infinity` for `percent` when `total` is `0`
+- [x] 1.1 `progress(tasks)` in `src/board.js`  → run: `/build-ui-logic`
+  - [x] 1.1.1 given `[]`, returns a whole-number `percent` of `0` and `label` exactly `No tasks yet`
+  - [x] 1.1.2 given a non-empty list where every task is done, returns `percent` of `100` and `label` exactly `All done`
+  - [x] 1.1.3 given a non-empty list where no task is done, returns `percent` of `0` and `label` exactly `{done} of {total} done` using the real counts (e.g. `0 of 3 done`), not `No tasks yet`
+  - [x] 1.1.4 given 1 done of 3 total, returns `percent` of `33` (a whole number, rounded) and `label` exactly `1 of 3 done`
+  - [x] 1.1.5 never returns `NaN` or `Infinity` for `percent` when `total` is `0`
 
 ### 1.X — Gate
 
