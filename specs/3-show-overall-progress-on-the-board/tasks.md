@@ -24,12 +24,12 @@ Satisfies: AC 1.1, AC 1.2, AC 1.3, AC 1.4, correctness properties 1–3
 
 Satisfies: AC 1.1, AC 1.2, AC 1.3, AC 1.4, AC 1.6, AC 2.1, AC 2.2
 
-- [ ] 2.1 `renderProgress({ percent, label })` in `src/render.js`  → run: `/build-ui-view`
-  - [ ] 2.1.1 renders an element with `data-testid="progress-bar"`, `role="progressbar"`, `aria-valuemin="0"`, `aria-valuemax="100"`, `aria-valuenow` equal to the given `percent`, and `aria-valuetext` equal to the given `label`
-  - [ ] 2.1.2 renders a fill inside the bar whose width reflects `percent` (e.g. an inline `width: {percent}%` style), so a `percent` of `33` fills about a third of the bar
-  - [ ] 2.1.3 renders an element with `data-testid="progress-label"` whose text is exactly the given `label`
-  - [ ] 2.1.4 still renders the bar and its `data-testid` when `percent` is `0` (never hidden or removed)
-  - [ ] 2.1.5 leaves `renderSummary` and `renderTask` unchanged in both markup and behavior
+- [x] 2.1 `renderProgress({ percent, label })` in `src/render.js`  → run: `/build-ui-view`
+  - [x] 2.1.1 renders an element with `data-testid="progress-bar"`, `role="progressbar"`, `aria-valuemin="0"`, `aria-valuemax="100"`, `aria-valuenow` equal to the given `percent`, and `aria-valuetext` equal to the given `label`
+  - [x] 2.1.2 renders a fill inside the bar whose width reflects `percent` (e.g. an inline `width: {percent}%` style), so a `percent` of `33` fills about a third of the bar
+  - [x] 2.1.3 renders an element with `data-testid="progress-label"` whose text is exactly the given `label`
+  - [x] 2.1.4 still renders the bar and its `data-testid` when `percent` is `0` (never hidden or removed)
+  - [x] 2.1.5 leaves `renderSummary` and `renderTask` unchanged in both markup and behavior
 
 ### 2.X — Gate
 
