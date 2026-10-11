@@ -47,9 +47,9 @@ Satisfies: AC 1.1, AC 1.2, AC 1.3, AC 1.4, AC 1.5, AC 2.1, AC 2.2, AC 3.4, AC 4.
 
 Satisfies: every acceptance criterion and correctness property in `requirements.md`
 
-- [ ] 3.1 `test/board.test.js` covers `filterButtonText` and `filterButtonAriaLabel` → run: `/build-tests`
-  - [ ] 3.1.1 `filterButtonText('All', 3) === 'All 3'`, `filterButtonText('Open', 2) === 'Open 2'`, `filterButtonText('Done', 1) === 'Done 1'`, `filterButtonText('Done', 0) === 'Done 0'` (AC 1.1, 3.1, 3.2, 3.3)
-  - [ ] 3.1.2 `filterButtonAriaLabel` singular: `filterButtonAriaLabel('Done', 1) === 'Done, 1 task'` (AC 4.1)
-  - [ ] 3.1.3 `filterButtonAriaLabel` plural, including zero: `filterButtonAriaLabel('Open', 2) === 'Open, 2 tasks'`, `filterButtonAriaLabel('All', 0) === 'All, 0 tasks'` (AC 4.1, 3.1, 3.2, 3.3)
+- [x] 3.1 `test/board.test.js` covers `filterButtonText` and `filterButtonAriaLabel` → run: `/build-tests`
+  - [x] 3.1.1 `filterButtonText('All', 3) === 'All 3'`, `filterButtonText('Open', 2) === 'Open 2'`, `filterButtonText('Done', 1) === 'Done 1'`, `filterButtonText('Done', 0) === 'Done 0'` (AC 1.1, 3.1, 3.2, 3.3)
+  - [x] 3.1.2 `filterButtonAriaLabel` singular: `filterButtonAriaLabel('Done', 1) === 'Done, 1 task'` (AC 4.1)
+  - [x] 3.1.3 `filterButtonAriaLabel` plural, including zero: `filterButtonAriaLabel('Open', 2) === 'Open, 2 tasks'`, `filterButtonAriaLabel('All', 0) === 'All, 0 tasks'` (AC 4.1, 3.1, 3.2, 3.3)
 
 > No section gate — this section is itself the tests.
