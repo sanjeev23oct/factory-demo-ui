@@ -8,7 +8,8 @@ let tasks = [];
 let filter = 'all';
 
 function draw() {
-  list.innerHTML = renderList(sortTasks(visibleTasks(tasks, filter)));
+  const today = new Date().toISOString().slice(0, 10);
+  list.innerHTML = renderList(sortTasks(visibleTasks(tasks, filter)), today);
   counts.innerHTML = renderSummary(summary(tasks));
   filters.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.filter === filter)));
 }
