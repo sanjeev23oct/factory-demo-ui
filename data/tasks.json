@@ -1,5 +1,5 @@
 [
-  { "id": 1, "title": "Renew the domain", "done": false },
+  { "id": 1, "title": "Renew the domain", "done": false, "due": "2026-11-03" },
   { "id": 2, "title": "Send the invoice", "done": true },
-  { "id": 3, "title": "Book the venue", "done": false }
+  { "id": 3, "title": "Book the venue", "done": false, "due": "2026-10-14" }
 ]
