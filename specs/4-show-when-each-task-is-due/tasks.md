@@ -7,12 +7,12 @@
 
 Satisfies: AC 1.1, AC 1.2, AC 1.4, AC 2.1, AC 2.2, AC 3.1, AC 3.2
 
-- [ ] 1.1 `dueText(task, today)` in `src/board.js`  → run: `/build-ui-logic`
-  - [ ] 1.1.1 given a task with no `due` property (or `due: null`/`undefined`), returns `null`
-  - [ ] 1.1.2 given a task whose `due` equals `today` (both `"YYYY-MM-DD"` strings), returns exactly `due today`
-  - [ ] 1.1.3 given a task with `due: "2026-11-03"` and a `today` that is not `"2026-11-03"`, returns exactly `due 3 Nov` (day of month with no leading zero, a space, a three-letter month abbreviation, no year)
-  - [ ] 1.1.4 the day-of-month and month come from parsing the `due` string's own `"YYYY-MM-DD"` components (e.g. splitting on `-`), never from constructing a `Date` and reading timezone-shifted fields, so the result does not change with the caller's local timezone
-  - [ ] 1.1.5 does not modify `summary`, `visibleTasks`, or `sortTasks`; their existing behavior is unchanged
+- [x] 1.1 `dueText(task, today)` in `src/board.js`  → run: `/build-ui-logic`
+  - [x] 1.1.1 given a task with no `due` property (or `due: null`/`undefined`), returns `null`
+  - [x] 1.1.2 given a task whose `due` equals `today` (both `"YYYY-MM-DD"` strings), returns exactly `due today`
+  - [x] 1.1.3 given a task with `due: "2026-11-03"` and a `today` that is not `"2026-11-03"`, returns exactly `due 3 Nov` (day of month with no leading zero, a space, a three-letter month abbreviation, no year)
+  - [x] 1.1.4 the day-of-month and month come from parsing the `due` string's own `"YYYY-MM-DD"` components (e.g. splitting on `-`), never from constructing a `Date` and reading timezone-shifted fields, so the result does not change with the caller's local timezone
+  - [x] 1.1.5 does not modify `summary`, `visibleTasks`, or `sortTasks`; their existing behavior is unchanged
 
 ### 1.X — Gate
 
