@@ -63,7 +63,7 @@ Satisfies: AC 2.2, AC 3.2, AC 4.1, AC 4.2
 
 Satisfies: AC 1.1, AC 1.2, AC 1.3, AC 1.4, AC 1.5, AC 2.1, AC 2.2, AC 3.1, AC 3.2, AC 4.1, AC 4.2, all correctness properties
 
-- [ ] 4.1 Tests for `dueText(task, today)` in `test/board.test.js`  → run: `/build-tests`
-  - [ ] 4.1.1 covers: no `due` → `null`; `due` equal to `today` → `due today`; `due: "2026-11-03"` with a different `today` → `due 3 Nov`; a second month/day combination (e.g. `due: "2026-01-09"`) → `due 9 Jan`, to show the result is derived from the string's own components and not a `Date` conversion
-- [ ] 4.2 Tests for `renderTask`/`renderList` in `test/render.test.js`  → run: `/build-tests`
-  - [ ] 4.2.1 covers: a task with a future `due` renders a `due-<id>` span with the formatted text; a task with `due` equal to `today` renders `due today`; a task with no `due` renders no `due-<id>` element and markup identical to the no-due-date case; due text containing HTML-sensitive characters is escaped; the empty-state and existing `renderSummary` tests continue to pass unchanged
+- [x] 4.1 Tests for `dueText(task, today)` in `test/board.test.js`  → run: `/build-tests`
+  - [x] 4.1.1 covers: no `due` → `null`; `due` equal to `today` → `due today`; `due: "2026-11-03"` with a different `today` → `due 3 Nov`; a second month/day combination (e.g. `due: "2026-01-09"`) → `due 9 Jan`, to show the result is derived from the string's own components and not a `Date` conversion
+- [x] 4.2 Tests for `renderTask`/`renderList` in `test/render.test.js`  → run: `/build-tests`
+  - [x] 4.2.1 covers: a task with a future `due` renders a `due-<id>` span with the formatted text; a task with `due` equal to `today` renders `due today`; a task with no `due` renders no `due-<id>` element and markup identical to the no-due-date case; due text containing HTML-sensitive characters is escaped; the empty-state and existing `renderSummary` tests continue to pass unchanged
