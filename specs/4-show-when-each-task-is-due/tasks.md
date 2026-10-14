@@ -24,12 +24,12 @@ Satisfies: AC 1.1, AC 1.2, AC 1.4, AC 2.1, AC 2.2, AC 3.1, AC 3.2
 
 Satisfies: AC 1.3, AC 1.4, AC 1.5, AC 2.1
 
-- [ ] 2.1 `renderTask(task, today)` in `src/render.js` imports and uses `dueText` from `./board.js`  → run: `/build-ui-view`
-  - [ ] 2.1.1 when `dueText(task, today)` is non-`null`, adds `<span class="due" data-testid="due-${task.id}">${escapeHtml(dueText(task, today))}</span>` inside the `<li>`, after the title span, so it sits next to the title (AC 1.3, AC 1.5)
-  - [ ] 2.1.2 when `dueText(task, today)` is `null`, adds no due element at all, and the rest of the markup (`data-testid="task-<id>"`, the mark, the title) is byte-for-byte identical to today's output for that task (AC 1.4)
-  - [ ] 2.1.3 the due text passes through `escapeHtml` like every other piece of task text
-- [ ] 2.2 `renderList(tasks, today)` threads `today` through to every call of `renderTask`  → run: `/build-ui-view`
-  - [ ] 2.2.1 the empty-state branch (`data-testid="empty"`) is unchanged
+- [x] 2.1 `renderTask(task, today)` in `src/render.js` imports and uses `dueText` from `./board.js`  → run: `/build-ui-view`
+  - [x] 2.1.1 when `dueText(task, today)` is non-`null`, adds `<span class="due" data-testid="due-${task.id}">${escapeHtml(dueText(task, today))}</span>` inside the `<li>`, after the title span, so it sits next to the title (AC 1.3, AC 1.5)
+  - [x] 2.1.2 when `dueText(task, today)` is `null`, adds no due element at all, and the rest of the markup (`data-testid="task-<id>"`, the mark, the title) is byte-for-byte identical to today's output for that task (AC 1.4)
+  - [x] 2.1.3 the due text passes through `escapeHtml` like every other piece of task text
+- [x] 2.2 `renderList(tasks, today)` threads `today` through to every call of `renderTask`  → run: `/build-ui-view`
+  - [x] 2.2.1 the empty-state branch (`data-testid="empty"`) is unchanged
 
 ### 2.X — Gate
 
