@@ -41,17 +41,17 @@ Satisfies: AC 1.3, AC 1.4, AC 1.5, AC 2.1
 
 Satisfies: AC 2.2, AC 3.2, AC 4.1, AC 4.2
 
-- [ ] 3.1 Compute `today` once per `draw()` call in `src/main.js` and pass it to `renderList(...)`  → run: `/build-ui-page`
-  - [ ] 3.1.1 `today` is a `"YYYY-MM-DD"` string derived from UTC date components (e.g. `new Date().toISOString().slice(0, 10)`), never from local-timezone components (AC 3.2)
-  - [ ] 3.1.2 the same `today` value is used for every task rendered in that call, so no two same-dated tasks in one render disagree on "due today" (AC 2.2)
-  - [ ] 3.1.3 the existing wiring of `#tasks`, `#summary`, and the filter buttons' `aria-pressed` and click handling is unchanged
-- [ ] 3.2 `data/tasks.json` demonstrates all three due states  → run: `/build-ui-page`
-  - [ ] 3.2.1 task `id: 1` ("Renew the domain", `done: false`) gets a `due` value in the future relative to when the file is read (AC 4.1)
-  - [ ] 3.2.2 task `id: 3` ("Book the venue", `done: false`) gets a `due` value equal to today's date on the day this spec is implemented, so it renders as "due today" (AC 4.1)
-  - [ ] 3.2.3 task `id: 2` ("Send the invoice", `done: true`) keeps no `due` field at all (AC 4.1)
-  - [ ] 3.2.4 every task's `id`, `title`, and `done` fields are unchanged; only `due` fields are added (AC 4.2)
-  - [ ] 3.2.5 keeps the file's existing one-task-per-line formatting
-- [ ] 3.3 Add a `.task .due` style to `styles.css`, using the existing colour variables (e.g. `--muted`)  → run: `/build-ui-page`
+- [x] 3.1 Compute `today` once per `draw()` call in `src/main.js` and pass it to `renderList(...)`  → run: `/build-ui-page`
+  - [x] 3.1.1 `today` is a `"YYYY-MM-DD"` string derived from UTC date components (e.g. `new Date().toISOString().slice(0, 10)`), never from local-timezone components (AC 3.2)
+  - [x] 3.1.2 the same `today` value is used for every task rendered in that call, so no two same-dated tasks in one render disagree on "due today" (AC 2.2)
+  - [x] 3.1.3 the existing wiring of `#tasks`, `#summary`, and the filter buttons' `aria-pressed` and click handling is unchanged
+- [x] 3.2 `data/tasks.json` demonstrates all three due states  → run: `/build-ui-page`
+  - [x] 3.2.1 task `id: 1` ("Renew the domain", `done: false`) gets a `due` value in the future relative to when the file is read (AC 4.1)
+  - [x] 3.2.2 task `id: 3` ("Book the venue", `done: false`) gets a `due` value equal to today's date on the day this spec is implemented, so it renders as "due today" (AC 4.1)
+  - [x] 3.2.3 task `id: 2` ("Send the invoice", `done: true`) keeps no `due` field at all (AC 4.1)
+  - [x] 3.2.4 every task's `id`, `title`, and `done` fields are unchanged; only `due` fields are added (AC 4.2)
+  - [x] 3.2.5 keeps the file's existing one-task-per-line formatting
+- [x] 3.3 Add a `.task .due` style to `styles.css`, using the existing colour variables (e.g. `--muted`)  → run: `/build-ui-page`
 
 ### 3.X — Gate
 
